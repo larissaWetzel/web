@@ -28,30 +28,32 @@
             Mitose mi = new Mitose();
             Prófase p = new Prófase();
             Telófase t = new Telófase();
-            
-            
+
             String busca = request.getParameter("caracteristicas");
-            %>
-            
-            Analisando: <%/*=busca*/%>
-            <%FazTudo f = new FazTudo();
-            if(f.returnFase() == "Anáfase"){
-                  %> Processo de Anáfase <%
-                }%>
-            <br>
-            <%
-               /* out.println(a.prop);
-                out.println(me.prop);
-                out.println(met.prop);
-                out.println(mi.prop);
-                out.println(p.prop);
-                out.println(t.prop);*/
-               
-                if(f.returnFase() == "Anáfase"){
-                  %> Processo de Anáfase <%
-                }
-               
-                    %>
-           
+        %>
+
+        Analisando: 
+        <%FazTudo f = new FazTudo();
+            if (f.returnFase() == "Anáfase") {
+        %> Processo de Anáfase <%
+              } else {
+        %>  maybe <%
+                    }
+        %>
+        <br>
+        <%
+            /* out.println(a.prop);
+             out.println(me.prop);
+             out.println(met.prop);
+             out.println(mi.prop);
+             out.println(p.prop);
+             out.println(t.prop);*/
+
+            if (f.returnFase() == "Anáfase") {
+        %> Processo de Anáfase <%
+                  }
+
+        %>
+
     </body>
 </html>
