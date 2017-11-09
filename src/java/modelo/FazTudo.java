@@ -9,27 +9,32 @@ public class FazTudo {
     public void caract(String s) {
         prop.add(s);
     }
+    
 
-    public String returnFase() {
-        String fase = null;
-        int x = -1;
-        for (int i = 0; i < prop.size(); i++) {
-            if (prop.get(x) == "separação das cromátides-irmãs" || prop.get(x) == "migração das cromátides-irmãs") {
+    public String returnFase(String palavras) {
+        String fase = "";
+        for (java.lang.String s : prop) {
+            if (palavras.equals(s)) {
                 fase = "Anáfase";
-            } else {
-                if (prop.get(x) == "reducioção da divisão") {
-                    fase = "Meiose";
-                } else {
-                    if(prop.get(x)== "centrômetro ligado a fibras"){
-                        fase = "Metáfase";
-                        
-                    } else {
-                        fase = "não entendi";
-                    }
-                }
+                break;
+            } else if ("É um processo reducional de divisão, originando células haplóideso.".equals(s)) {
+                fase = "Meiose";
+                break;
+            } else if ("Cada cromossomo terá o centrômetro ligado a fibras de ambos os pólos.".equals(s)) {
+                fase = "Metáfase";
+                break;
+            } else if ("Células-filhas contendo cada uma exatamento o mesmo número de cromossomos da célula-mãe.".equals(s)) {
+                fase = "Mitose";
+                break;
+            } else if ("Nucléolo desaparece.".equals(s)) {
+                fase = "Prófase";
+                break;
+            } else if ("Cariocinese completa e as fibras desaparecem.".equals(s)) {
+                fase = "Telófase";
+                break;
             }
-
-        }
+        }    
+        System.out.println(fase);
         return fase;
     }
 }
