@@ -25,6 +25,10 @@ public class controlador extends HttpServlet {
            
             FazTudo faz = new FazTudo();
             //faz.returnFase(request.getParameter(name));
+            //colocar os comandos de resultado aqui
+            //adicionar os valores finais em variaveis e enviar para resultados
+            //chamar controlador no index
+            //exemplos no programa da biblioteca
         }
     }
 

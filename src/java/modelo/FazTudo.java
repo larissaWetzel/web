@@ -10,7 +10,6 @@ public class FazTudo {
         prop.add(s);
     }
     
-
     public String returnFase(String palavras) {
         String fase = "";
         for (java.lang.String s : prop) {

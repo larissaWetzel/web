@@ -29,7 +29,7 @@
             Mitose mi = new Mitose();
             Profase p = new Profase();
             Telofase t = new Telofase();
-
+            //request no controlador (set)
             String busca = request.getParameter("caracteristicas");
         %>
 
